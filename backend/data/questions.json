@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "question": "What will `typeof NaN` return?",
+    "options": ["'number'", "'NaN'", "'undefined'", "'object'"],
+    "answer": "'number'",
+    "difficulty": "medium"
+  },
+  {
+    "id": 2,
+    "question": "Which method is used to shallow copy properties from one object to another?",
+    "options": ["Object.clone()", "Object.assign()", "Object.copy()", "Object.merge()"],
+    "answer": "Object.assign()",
+    "difficulty": "medium"
+  },
+  {
+    "id": 3,
+    "question": "What does the 'this' keyword refer to inside a regular function in strict mode?",
+    "options": ["Global object", "undefined", "The function itself", "The parent object"],
+    "answer": "undefined",
+    "difficulty": "medium"
+  },
+  {
+    "id": 4,
+    "question": "Which of the following is true about arrow functions?",
+    "options": [
+      "They have their own 'this'",
+      "They can be used as constructors",
+      "They inherit 'this' from the parent scope",
+      "They create a new scope"
+    ],
+    "answer": "They inherit 'this' from the parent scope",
+    "difficulty": "medium"
+  },
+  {
+    "id": 5,
+    "question": "What will the following code output?\n\n```js\nconsole.log(0.1 + 0.2 === 0.3);\n```",
+    "options": ["true", "false", "undefined", "NaN"],
+    "answer": "false",
+    "difficulty": "hard"
+  },
+  {
+    "id": 6,
+    "question": "How can you create a private variable in JavaScript (ES6+)?",
+    "options": [
+      "Using `var` inside a function",
+      "Using closures",
+      "Using `this` keyword",
+      "Using global variables"
+    ],
+    "answer": "Using closures",
+    "difficulty": "hard"
+  },
+  {
+    "id": 7,
+    "question": "What does the following code output?\n\n```js\nlet a = [1, 2, 3];\nlet b = a;\nb.push(4);\nconsole.log(a);\n```",
+    "options": ["[1, 2, 3]", "[1, 2, 3, 4]", "[4, 2, 3]", "Error"],
+    "answer": "[1, 2, 3, 4]",
+    "difficulty": "medium"
+  },
+  {
+    "id": 8,
+    "question": "What is the output?\n\n```js\n(async () => {\n  return await 10;\n})().then(console.log);\n```",
+    "options": ["undefined", "Promise {10}", "10", "Error"],
+    "answer": "10",
+    "difficulty": "hard"
+  },
+  {
+    "id": 9,
+    "question": "Which data structure guarantees O(1) access time?",
+    "options": ["Array", "Set", "Object", "Map"],
+    "answer": "Object",
+    "difficulty": "hard"
+  },
+  {
+    "id": 10,
+    "question": "Which of these methods does NOT mutate the original array?",
+    "options": ["push()", "splice()", "filter()", "pop()"],
+    "answer": "filter()",
+    "difficulty": "medium"
+  }
+]
