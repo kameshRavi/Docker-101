@@ -5,7 +5,7 @@ const crypto = require('crypto');
 const cors = require('cors');
 
 const app = express();
-const PORT = 4001;
+const PORT = process.env.PORT || 8080;
 
 const USERS_FILE = path.join(__dirname, 'data', 'users.json');
 const QUESTIONS_FILE = path.join(__dirname, 'data', 'questions.json');
