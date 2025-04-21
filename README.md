@@ -63,6 +63,11 @@ docker compose up
 │   ├── Dockerfile
 │   ├── index.html
 │   └── package.json
+├── infra/
+|   ├── main.tf
+|   ├── output.tf
+|   ├── variables.tf
+|   └── terraform.tfvars
 └── docker-compose.yml
 ```
 
@@ -103,3 +108,66 @@ pnpm dev
   - Node.js runtime
   - Exposed on port 8080
   - Persistent volume for data storage
+
+## Infrastructure as Code with Terraform
+
+The application can be deployed to Google Cloud Run using Terraform. The infrastructure code is located in the `infra` directory.
+
+### Prerequisites
+
+- Terraform installed
+- Google Cloud SDK installed
+- Docker installed
+- Google Cloud Project with required APIs enabled
+  - Cloud Run API
+  - Artifact Registry API
+  - IAM API
+
+### Configuration
+
+Update the variables in `infra/terraform.tfvars`:
+
+```hcl
+project_id                      = "your-project-id"
+region                          = "your-region"
+artifact_repo                   = "your-repo-name"
+backend_service_and_image_name  = "quiz-backend"
+frontend_service_and_image_name = "quiz-frontend"
+```
+
+### Deployment Steps
+
+1. Initialize Terraform:
+```bash
+cd infra
+terraform init
+```
+
+2. Review the deployment plan:
+```bash
+terraform plan
+```
+
+3. Apply the infrastructure:
+```bash
+terraform apply
+```
+
+This will:
+- Create an Artifact Registry repository
+- Build and push Docker images
+- Deploy backend service to Cloud Run
+- Deploy frontend service to Cloud Run
+- Configure public access for both services
+
+4. Get the service URLs:
+```bash
+terraform output
+```
+
+### Cleanup
+
+To remove all created resources:
+```bash
+terraform destroy
+```

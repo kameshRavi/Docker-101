@@ -1,0 +1,5 @@
+project_id                      = "<project-id>"
+region                          = "<regin>"
+artifact_repo                   = "<artifact-repo>"
+backend_service_and_image_name  = "quiz-backend"
+frontend_service_and_image_name = "quiz-frontend"
